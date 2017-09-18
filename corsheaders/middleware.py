@@ -1,7 +1,7 @@
 import re
 
 from django import http
-from django.apps import apps
+#from django.apps import apps
 from django.utils.cache import patch_vary_headers
 from django.utils.six.moves.urllib.parse import urlparse
 
@@ -116,7 +116,7 @@ class CorsMiddleware(MiddlewareMixin):
         if (
             not conf.CORS_ORIGIN_ALLOW_ALL and
             not self.origin_found_in_white_lists(origin, url) and
-            not self.origin_found_in_model(url) and
+#            not self.origin_found_in_model(url) and
             not self.check_signal(request)
         ):
             return response
