@@ -3,7 +3,7 @@ import re
 from django import http
 #from django.apps import apps
 from django.utils.cache import patch_vary_headers
-from django.utils.six.moves.urllib.parse import urlparse
+from urlparse import urlparse
 
 from .compat import MiddlewareMixin
 from .conf import conf
